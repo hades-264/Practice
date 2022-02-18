@@ -1,4 +1,4 @@
 # codechef_practice
- codechef ,codeforces and leetcode practice questions and
+ Codechef ,Codeforces and Leetcode practice questions and
  past contest upsolving questions.
  
