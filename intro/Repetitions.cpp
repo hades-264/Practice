@@ -46,7 +46,7 @@ void code()
         string s;
         cin >> s;
 
-        int maxi = INT_MIN;
+        int maxi = 1;
         int cnt = 0;
         for (int i = 0;i < s.length() - 1;i++)
                 {
