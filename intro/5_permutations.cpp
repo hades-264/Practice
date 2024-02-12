@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define fastio()                      \
@@ -13,7 +13,7 @@ using namespace std;
 #define ppb pop_back
 #define vi vector<long long>
 #define vvi vector<vector<long long>>
-#define pi pair<long long,long long>
+#define pi pair<long long, long long>
 #define vpi vector<pair<long long, long long>>
 #define vpsi vector<pair<string, long long>>
 #define acc(x, sum) accumulate(x.begin(), x.end(), sum)
@@ -32,10 +32,14 @@ using namespace std;
 #define rev(x) sort(x.begin(), x.end(), greater<int>())
 #define inc1(x, n) sort(x, x + n)
 #define rev1(x, n) sort(x, x + n, greater<int>())
-#define google cout<<"Case #"<<i<<": "
-#define sf(x) scanf("%lld",&x)
-#define read(x,n) for(int i=0;i<n;i++) cin>>x[i]
-#define print(x,n) for(int i=0;i<n;i++) cout<<x[i]<<" "
+#define google cout << "Case #" << i << ": "
+#define sf(x) scanf("%lld", &x)
+#define read(x, n)              \
+    for (int i = 0; i < n; i++) \
+    cin >> x[i]
+#define print(x, n)             \
+    for (int i = 0; i < n; i++) \
+    cout << x[i] << " "
 #define ff first
 #define ss second
 #define bk break
@@ -43,27 +47,24 @@ typedef long long ll;
 
 void code()
 {
-        int n;
-        cin >> n;
+    int n;
+    cin >> n;
 
-        vector<int> arr(n);
-        read(arr, n);
+    if (n !=1 and n < 4)
+    {
+        cout << "NO SOLUTION";
+        return;
+    }
 
-        ll cnt = 0;
-        ll ans = 0;
-        for (int i = 1; i < n;i++)
-        {
-            if(arr[i-1] > arr[i])
-            {
-                cnt = abs(arr[i] - arr[i - 1]);
-                ans += cnt;
-                arr[i] += cnt;
-                cnt=0;
-            }
-                cnt += abs(arr[i] - arr[i - 1]);
-        }
+    for (int i = 1; i <= n / 2; i++)
+    {
+        cout << i + n / 2 << " " << i << " ";
+    }
 
-        cout << ans;
+    if (n & 1)
+    {
+        cout << n;
+    }
 }
 
 int main()
@@ -74,4 +75,3 @@ int main()
 
     return 0;
 }
-
